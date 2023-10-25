@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MyMvcApp.Models.Emplyees>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <table class="table-table-striped">
+    @foreach(var emp in Model)
+    {
+        <tr>
+        <td>@emp.EmployeeId</td>
+        <td>@emp.EmployeeName</td>
+        <td>@emp.Salary</td>
+        <td>@emp.JoinDate</td>
+        </tr>
+    }
+    </table>
+    
+</div>
+@* above statements are loosely typed views *@
+
+@* @* <p>
+    @ViewData["message"]
+</p> *@
+@* @{
+    foreach(var v in ViewBag.message2)
+    {
+        @v<br />
+    }
+} *@ 
+
+@* @{
+    int[] ar=new int[] {10,23,30,40,21,44,55,66};
+    foreach(var i in ar)
+    {
+        if(@i%2==1)
+            @i<br />
+    }
+}
+<a href="/Home/Content">Content Result</a><br/>
+<a href="/Home/Redirect">Redirect to Facebook</a><br/>
+<a href="/Home/Json">JSON Result</a><br/>
+<a class="btn btn-info" href="/Home/FileDownload">File Download</a><br/> *@
+
